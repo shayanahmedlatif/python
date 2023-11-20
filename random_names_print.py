@@ -4,12 +4,13 @@
 import random
 
 # Names list
-names = ["Shayan", "Shaharyar", "Zakira", "Rabail", "M Latif"]
+names = ["Liam", "Noah", "Oliver", "Harry", "Jacob", "Leo", "Charlie", "Amelia", "Isla", "Ava"]
 
 # Now, we'll use the random funtion to get the random 
 # Number of a specific name
 # This line of code below will convert the specific name
 # Into a excat number by using the len() function.
+
 generat_random_name = random.randrange(len(names))
 
 
