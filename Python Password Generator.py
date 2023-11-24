@@ -6,6 +6,12 @@ import random
 print("Welcome to the password generator.")
 print("Generate strong password, Minimum length is 8 required.")
 
+# Default Password Generator values
+def_password_len = 8
+def_password_characs = 4
+def_password_alphabets = 2
+def_password_nums = 2
+
 
 # Gathered all information 
 # Like, Alphabets, Numbers, and Special Characters
@@ -16,6 +22,7 @@ all_nums = list(string.digits)
 # print(all_characs)
 
 
+
 # Input validation
 # Ask questions and checks if they're valid integer.
 # Then move to the next input/
@@ -23,14 +30,15 @@ all_nums = list(string.digits)
 
 while True:
     # Default password length is 8 characters.
-    password_length = input("How long would you like your password?\n") or 8
+    password_length = input("How long would you like your password?\n") or def_password_len
     try: 
          password_length = int(password_length)
     except:
         print("Invalid Input! Please try again!\n")
         
     # Inputs to gather user selected length in passwords.
-    password_characs = input(f"How many special characters you want? You've {password_length} characters left.\n") or 4
+    # Ask for password special characters to be included default length is 4
+    password_characs = input(f"How many special characters you want? You've {password_length} characters left.\n") or def_password_characs
     try:
          password_characs = int(password_characs)
     except:
@@ -39,8 +47,8 @@ while True:
     if password_length < password_characs:
         print(f"Limit Exceed! You cannot choose more that {password_length} characters.  Try again")
         continue   
-         
-    password_alpha = input(f"How many alphabets (Captalize) you want? You've {(int(password_length) - int(password_characs))} characters left.\n") or 2
+    # Ask for password alphabets captalize to be included default length is 2
+    password_alpha = input(f"How many alphabets (Captalize) you want? You've {(int(password_length) - int(password_characs))} characters left.\n") or def_password_alphabets
     try:
          password_alpha = int(password_alpha)
     except:
@@ -49,8 +57,8 @@ while True:
     if password_length < password_alpha:
         print(f"Limit Exceed! You cannot choose more that {password_length} characters. Try again")
         continue  
-        
-    password_nums = input(f"How many numbers you want? You've {(int(password_length) -int(password_characs) - int(password_alpha))} characters left.\n") or 2
+    # Ask for password numbers to be included default length is 2   
+    password_nums = input(f"How many numbers you want? You've {(int(password_length) -int(password_characs) - int(password_alpha))} characters left.\n") or def_password_nums
     try: 
          password_nums = int(password_nums)
     except:
