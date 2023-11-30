@@ -22,5 +22,6 @@ rand_name = names[generat_random_name]
 
 # Print the rand name into the screen.
 
-print(f"{rand_name}, will pay the bill today.")
+# print(f"{rand_name}, will pay the bill today.")
 # print(len(names))
+print(rand_name)
