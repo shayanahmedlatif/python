@@ -1,7 +1,6 @@
 # Preparing the Hangman Project
 # Imported Functions
 import random
-import copy
 
 # Hangmand Project
 def hangman_project_fn():
